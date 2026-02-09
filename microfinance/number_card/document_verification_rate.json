@@ -1,0 +1,13 @@
+{
+    "doctype": "Number Card",
+    "name": "Document Verification Rate",
+    "label": "Document Verification Rate",
+    "type": "Document Type",
+    "document_type": "Government Worker Verification",
+    "function": "Count",
+    "filters_json": "[[\"Government Worker Verification\",\"verification_status\",\"=\",\"Verified\"]]",
+    "is_public": 1,
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "color": "#95E1D3"
+}

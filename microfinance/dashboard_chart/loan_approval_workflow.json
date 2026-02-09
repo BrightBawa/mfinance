@@ -1,0 +1,13 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Loan Approval Workflow",
+    "chart_name": "Loan Approval Workflow",
+    "chart_type": "Bar",
+    "document_type": "Loan Approval",
+    "is_public": 1,
+    "use_report": 0,
+    "timeseries": 0,
+    "based_on": "created",
+    "filters_json": "",
+    "query": "SELECT status, COUNT(*) as count FROM `tabLoan Approval` GROUP BY status"
+}

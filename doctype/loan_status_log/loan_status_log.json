@@ -1,0 +1,43 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Loan Status Log ID"
+        },
+        {
+            "fieldname": "loan",
+            "fieldtype": "Link",
+            "label": "Loan",
+            "options": "Loan",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Draft\nPending\nApproved\nRejected\nDisbursed"
+        },
+        {
+            "fieldname": "changed_by",
+            "fieldtype": "Link",
+            "label": "Changed By",
+            "options": "User"
+        },
+        {
+            "fieldname": "changed_on",
+            "fieldtype": "DateTime",
+            "label": "Changed On"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text",
+            "label": "Remarks"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Loan Status Log"
+}

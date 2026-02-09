@@ -1,0 +1,13 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Loan Application Status",
+    "chart_name": "Loan Application Status",
+    "chart_type": "Donut",
+    "document_type": "Loan Application",
+    "is_public": 1,
+    "use_report": 0,
+    "timeseries": 0,
+    "based_on": "created",
+    "filters_json": "",
+    "query": "SELECT status, COUNT(*) as count FROM `tabLoan Application` GROUP BY status"
+}

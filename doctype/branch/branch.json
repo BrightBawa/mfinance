@@ -1,0 +1,27 @@
+{
+    "allow_rename": 1,
+    "autoname": "field:name",
+    "creation": "2025-01-24 10:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Branch Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "address",
+            "fieldtype": "Text",
+            "label": "Address"
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Branch"
+}

@@ -1,0 +1,12 @@
+{
+    "doctype": "Number Card",
+    "name": "Total Branches",
+    "label": "Total Branches",
+    "type": "Document Type",
+    "document_type": "Branch",
+    "function": "Count",
+    "filters_json": "[]",
+    "is_public": 1,
+    "show_percentage_stats": 0,
+    "color": "#339AF0"
+}

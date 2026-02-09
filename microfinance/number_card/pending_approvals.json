@@ -1,0 +1,13 @@
+{
+    "doctype": "Number Card",
+    "name": "Pending Approvals",
+    "label": "Pending Approvals",
+    "type": "Document Type",
+    "document_type": "Loan",
+    "function": "Count",
+    "filters_json": "[[\"Loan\",\"docstatus\",\"=\",0],[\"Loan\",\"workflow_state\",\"!=\",\"Rejected\"]]",
+    "is_public": 1,
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "color": "#FFA94D"
+}

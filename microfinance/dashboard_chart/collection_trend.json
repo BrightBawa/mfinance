@@ -1,0 +1,13 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Collection Trend",
+    "chart_name": "Collection Trend Over Time",
+    "chart_type": "Line",
+    "document_type": "Payment",
+    "group_by_based_on": "DATE(transaction_date)",
+    "aggregate_function": "Sum",
+    "aggregate_function_based_on": "amount",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT DATE(transaction_date) as date, SUM(amount) as total_collected FROM `tabPayment` WHERE payment_status = 'Reconciled' GROUP BY DATE(transaction_date) ORDER BY date DESC LIMIT 30"
+}

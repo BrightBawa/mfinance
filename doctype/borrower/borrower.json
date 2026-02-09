@@ -1,0 +1,263 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:borrower_id",
+    "creation": "2026-02-08 10:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "borrower_id",
+        "branch",
+        "customer",
+        "section_break_personal",
+        "full_name",
+        "email",
+        "mobile_number",
+        "date_of_birth",
+        "gender",
+        "section_break_kyc",
+        "government_id_type",
+        "government_id_number",
+        "id_verification_status",
+        "kyc_documents",
+        "section_break_employment",
+        "employment_status",
+        "employment_type",
+        "employer_name",
+        "annual_income",
+        "income_verification_status",
+        "salary_certificate_attached",
+        "section_break_credit",
+        "credit_score",
+        "section_break_verification",
+        "verified",
+        "verification_date",
+        "verified_by",
+        "verification_notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "borrower_id",
+            "fieldtype": "Data",
+            "label": "Borrower ID",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "branch",
+            "fieldtype": "Link",
+            "label": "Branch",
+            "options": "Branch",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "ERPNext Customer",
+            "options": "Customer",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_personal",
+            "fieldtype": "Section Break",
+            "label": "Personal Information"
+        },
+        {
+            "fieldname": "full_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Full Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "reqd": 1
+        },
+        {
+            "fieldname": "mobile_number",
+            "fieldtype": "Data",
+            "label": "Mobile Number",
+            "reqd": 1
+        },
+        {
+            "fieldname": "date_of_birth",
+            "fieldtype": "Date",
+            "label": "Date of Birth"
+        },
+        {
+            "fieldname": "gender",
+            "fieldtype": "Select",
+            "label": "Gender",
+            "options": "Male\nFemale\nOther"
+        },
+        {
+            "fieldname": "section_break_kyc",
+            "fieldtype": "Section Break",
+            "label": "KYC Information"
+        },
+        {
+            "fieldname": "government_id_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Government ID Type",
+            "options": "National ID\nPassport\nDriver's License\nVoter ID"
+        },
+        {
+            "fieldname": "government_id_number",
+            "fieldtype": "Data",
+            "label": "Government ID Number",
+            "unique": 1
+        },
+        {
+            "fieldname": "id_verification_status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "ID Verification Status",
+            "options": "Pending\nVerified\nFailed",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "kyc_documents",
+            "fieldtype": "Table",
+            "label": "KYC Documents",
+            "options": "Borrower KYC Document"
+        },
+        {
+            "fieldname": "section_break_employment",
+            "fieldtype": "Section Break",
+            "label": "Employment Information"
+        },
+        {
+            "fieldname": "employment_status",
+            "fieldtype": "Select",
+            "in_standard_filter": 1,
+            "label": "Employment Status",
+            "options": "Employed\nSelf-Employed\nUnemployed\nRetired",
+            "reqd": 1
+        },
+        {
+            "fieldname": "employment_type",
+            "fieldtype": "Select",
+            "in_standard_filter": 1,
+            "label": "Employment Type",
+            "options": "Government\nPrivate\nBusiness\nAgricultural\nOther"
+        },
+        {
+            "fieldname": "employer_name",
+            "fieldtype": "Data",
+            "label": "Employer Name"
+        },
+        {
+            "fieldname": "annual_income",
+            "fieldtype": "Currency",
+            "label": "Annual Income"
+        },
+        {
+            "fieldname": "income_verification_status",
+            "fieldtype": "Select",
+            "label": "Income Verification Status",
+            "options": "Pending\nVerified\nFailed",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "salary_certificate_attached",
+            "fieldtype": "Check",
+            "label": "Salary Certificate Attached"
+        },
+        {
+            "fieldname": "section_break_credit",
+            "fieldtype": "Section Break",
+            "label": "Credit Assessment"
+        },
+        {
+            "fieldname": "credit_score",
+            "fieldtype": "Float",
+            "label": "Credit Score",
+            "precision": "2"
+        },
+        {
+            "fieldname": "section_break_verification",
+            "fieldtype": "Section Break",
+            "label": "Verification"
+        },
+        {
+            "fieldname": "verified",
+            "fieldtype": "Check",
+            "label": "Verified",
+            "default": 0
+        },
+        {
+            "fieldname": "verification_date",
+            "fieldtype": "Datetime",
+            "label": "Verification Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "verified_by",
+            "fieldtype": "Link",
+            "label": "Verified By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "verification_notes",
+            "fieldtype": "Text",
+            "label": "Verification Notes"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-08 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Microfinance",
+    "name": "Borrower",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Loan Officer",
+            "share": 0,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Branch Manager",
+            "share": 0,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "full_name",
+    "track_changes": 1
+}

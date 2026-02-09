@@ -1,0 +1,12 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Verification Status",
+    "chart_name": "Verification Status",
+    "chart_type": "Pie",
+    "document_type": "Government Worker Verification",
+    "group_by_based_on": "verification_status",
+    "aggregate_function": "Count",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT verification_status, COUNT(*) as count FROM `tabGovernment Worker Verification` GROUP BY verification_status"
+}

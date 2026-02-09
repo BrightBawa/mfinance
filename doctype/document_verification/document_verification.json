@@ -1,0 +1,32 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Document Verification ID"
+        },
+        {
+            "fieldname": "borrower",
+            "fieldtype": "Link",
+            "label": "Borrower",
+            "options": "Borrower",
+            "reqd": 1
+        },
+        {
+            "fieldname": "document_type",
+            "fieldtype": "Data",
+            "label": "Document Type"
+        },
+        {
+            "fieldname": "verification_status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Pending\nVerified\nFailed"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Document Verification"
+}

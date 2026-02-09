@@ -1,0 +1,353 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "naming_series:",
+    "creation": "2026-02-08 11:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "track_changes": 1,
+    "field_order": [
+        "naming_series",
+        "company",
+        "branch",
+        "section_break_basic",
+        "borrower",
+        "customer",
+        "loan_product",
+        "requested_amount",
+        "approved_amount",
+        "currency",
+        "section_break_terms",
+        "interest_rate",
+        "tenure_months",
+        "repayment_frequency",
+        "interest_calculation_method",
+        "start_date",
+        "section_break_status",
+        "status",
+        "workflow_state",
+        "approval_date",
+        "approved_by",
+        "disbursement_date",
+        "section_break_collateral",
+        "collateral",
+        "co_signer",
+        "section_break_government",
+        "government_verification_required",
+        "government_verification_status",
+        "government_verification_flag_date",
+        "government_verification_notes",
+        "manual_verification_notes",
+        "manual_verified_by",
+        "manual_verified_date",
+        "section_break_accounting",
+        "company_bank_account",
+        "loan_receivable_account",
+        "interest_income_account",
+        "interest_receivable_account"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Naming Series",
+            "options": "LN-.YYYY.-",
+            "set_only_once": 1
+        },
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company",
+            "reqd": 1,
+            "default": "frappe.defaults.get_user_default('Company')"
+        },
+        {
+            "fieldname": "branch",
+            "fieldtype": "Link",
+            "label": "Branch",
+            "options": "Branch",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_basic",
+            "fieldtype": "Section Break",
+            "label": "Basic Information"
+        },
+        {
+            "fieldname": "borrower",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Borrower",
+            "options": "Borrower",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "ERPNext Customer",
+            "options": "Customer",
+            "read_only": 1
+        },
+        {
+            "fieldname": "loan_product",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Loan Product",
+            "options": "Loan Product",
+            "reqd": 1
+        },
+        {
+            "fieldname": "requested_amount",
+            "fieldtype": "Currency",
+            "label": "Requested Amount",
+            "options": "currency",
+            "reqd": 1
+        },
+        {
+            "fieldname": "approved_amount",
+            "fieldtype": "Currency",
+            "label": "Approved Amount",
+            "options": "currency"
+        },
+        {
+            "fieldname": "currency",
+            "fieldtype": "Link",
+            "label": "Currency",
+            "options": "Currency",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_terms",
+            "fieldtype": "Section Break",
+            "label": "Loan Terms"
+        },
+        {
+            "fieldname": "interest_rate",
+            "fieldtype": "Float",
+            "label": "Annual Interest Rate (%)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "tenure_months",
+            "fieldtype": "Int",
+            "label": "Tenure (months)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "repayment_frequency",
+            "fieldtype": "Select",
+            "label": "Repayment Frequency",
+            "options": "Monthly\nQuarterly",
+            "default": "Monthly",
+            "reqd": 1
+        },
+        {
+            "fieldname": "interest_calculation_method",
+            "fieldtype": "Select",
+            "label": "Interest Calculation Method",
+            "options": "Simple Interest\nCompound Interest Monthly\nDeclining Balance",
+            "default": "Simple Interest",
+            "reqd": 1
+        },
+        {
+            "fieldname": "start_date",
+            "fieldtype": "Date",
+            "label": "Loan Start Date"
+        },
+        {
+            "fieldname": "section_break_status",
+            "fieldtype": "Section Break",
+            "label": "Status & Workflow"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Status",
+            "options": "Draft\nPending Approval\nCredit Check\nReview\nApproved\nDisbursed\nActive\nClosed\nRejected\nWritten Off",
+            "default": "Draft",
+            "read_only": 1
+        },
+        {
+            "fieldname": "workflow_state",
+            "fieldtype": "Link",
+            "label": "Workflow State",
+            "options": "Workflow State",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approval_date",
+            "fieldtype": "Datetime",
+            "label": "Approval Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approved_by",
+            "fieldtype": "Link",
+            "label": "Approved By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "disbursement_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Disbursement Date"
+        },
+        {
+            "fieldname": "section_break_collateral",
+            "fieldtype": "Section Break",
+            "label": "Collateral & Guarantees"
+        },
+        {
+            "fieldname": "collateral",
+            "fieldtype": "Link",
+            "label": "Collateral",
+            "options": "Collateral"
+        },
+        {
+            "fieldname": "co_signer",
+            "fieldtype": "Link",
+            "label": "Co-Signer",
+            "options": "Co Signer"
+        },
+        {
+            "fieldname": "section_break_government",
+            "fieldtype": "Section Break",
+            "label": "Government Worker Verification"
+        },
+        {
+            "fieldname": "government_verification_required",
+            "fieldtype": "Check",
+            "label": "Government Verification Required",
+            "default": 0
+        },
+        {
+            "fieldname": "government_verification_status",
+            "fieldtype": "Select",
+            "label": "Government Verification Status",
+            "options": "Pending\nVerified\nManual Review\nFailed",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "government_verification_flag_date",
+            "fieldtype": "DateTime",
+            "label": "Government Verification Flag Date"
+        },
+        {
+            "fieldname": "government_verification_notes",
+            "fieldtype": "Small Text",
+            "label": "Government Verification Notes"
+        },
+        {
+            "fieldname": "manual_verification_notes",
+            "fieldtype": "Small Text",
+            "label": "Manual Verification Notes"
+        },
+        {
+            "fieldname": "manual_verified_by",
+            "fieldtype": "Link",
+            "label": "Manual Verified By",
+            "options": "User"
+        },
+        {
+            "fieldname": "manual_verified_date",
+            "fieldtype": "DateTime",
+            "label": "Manual Verified Date"
+        },
+        {
+            "fieldname": "section_break_accounting",
+            "fieldtype": "Section Break",
+            "label": "Accounting"
+        },
+        {
+            "fieldname": "company_bank_account",
+            "fieldtype": "Link",
+            "label": "Company Bank Account",
+            "options": "Account",
+            "reqd": 1
+        },
+        {
+            "fieldname": "loan_receivable_account",
+            "fieldtype": "Link",
+            "label": "Loan Receivable Account",
+            "options": "Account",
+            "reqd": 1
+        },
+        {
+            "fieldname": "interest_income_account",
+            "fieldtype": "Link",
+            "label": "Interest Income Account",
+            "options": "Account",
+            "reqd": 1
+        },
+        {
+            "fieldname": "interest_receivable_account",
+            "fieldtype": "Link",
+            "label": "Interest Receivable Account",
+            "options": "Account",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-08 11:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Microfinance",
+    "name": "Loan",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "submit": 1,
+            "write": 1,
+            "cancel": 1,
+            "amend": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Loan Officer",
+            "share": 0,
+            "submit": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Branch Manager",
+            "share": 0,
+            "submit": 0,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "borrower",
+    "track_seen": 1
+}

@@ -1,0 +1,288 @@
+{
+    "actions": [],
+    "allow_rename": 0,
+    "autoname": "naming_series:",
+    "creation": "2026-02-08 12:30:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 0,
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "loan",
+        "borrower",
+        "customer",
+        "company",
+        "column_break_1",
+        "payment_date",
+        "posting_date",
+        "status",
+        "section_break_payment",
+        "total_payment_amount",
+        "principal_amount",
+        "interest_amount",
+        "penalty_amount",
+        "column_break_2",
+        "bank_account",
+        "mode_of_payment",
+        "reference_number",
+        "payment_entry",
+        "gl_entry_created",
+        "section_break_allocation",
+        "allocations",
+        "section_break_totals",
+        "total_allocated",
+        "unallocated_amount",
+        "section_break_notes",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "REPAY-.YYYY.-",
+            "reqd": 1
+        },
+        {
+            "fieldname": "loan",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Loan",
+            "options": "Loan",
+            "reqd": 1
+        },
+        {
+            "fetch_from": "loan.borrower",
+            "fieldname": "borrower",
+            "fieldtype": "Link",
+            "label": "Borrower",
+            "options": "Borrower",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "loan.customer",
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "loan.company",
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "in_standard_filter": 1,
+            "label": "Company",
+            "options": "Company",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "Today",
+            "fieldname": "payment_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Payment Date",
+            "reqd": 1
+        },
+        {
+            "default": "Today",
+            "fieldname": "posting_date",
+            "fieldtype": "Date",
+            "label": "Posting Date",
+            "reqd": 1
+        },
+        {
+            "default": "Draft",
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Status",
+            "options": "Draft\nPaid\nCancelled",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_payment",
+            "fieldtype": "Section Break",
+            "label": "Payment Details"
+        },
+        {
+            "fieldname": "total_payment_amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Payment Amount",
+            "precision": "2",
+            "reqd": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "principal_amount",
+            "fieldtype": "Currency",
+            "label": "Principal Amount",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "interest_amount",
+            "fieldtype": "Currency",
+            "label": "Interest Amount",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "penalty_amount",
+            "fieldtype": "Currency",
+            "label": "Penalty Amount",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "bank_account",
+            "fieldtype": "Link",
+            "label": "Bank Account",
+            "options": "Account",
+            "reqd": 1
+        },
+        {
+            "fieldname": "mode_of_payment",
+            "fieldtype": "Link",
+            "label": "Mode of Payment",
+            "options": "Mode of Payment"
+        },
+        {
+            "fieldname": "reference_number",
+            "fieldtype": "Data",
+            "label": "Reference Number"
+        },
+        {
+            "fieldname": "payment_entry",
+            "fieldtype": "Link",
+            "label": "Payment Entry",
+            "options": "Payment Entry",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "gl_entry_created",
+            "fieldtype": "Check",
+            "label": "GL Entry Created",
+            "read_only": 1
+        },
+        {
+            "collapsible": 0,
+            "fieldname": "section_break_allocation",
+            "fieldtype": "Section Break",
+            "label": "Payment Allocation"
+        },
+        {
+            "fieldname": "allocations",
+            "fieldtype": "Table",
+            "label": "Allocations",
+            "options": "Loan Repayment Allocation"
+        },
+        {
+            "fieldname": "section_break_totals",
+            "fieldtype": "Section Break",
+            "label": "Allocation Summary"
+        },
+        {
+            "default": "0",
+            "fieldname": "total_allocated",
+            "fieldtype": "Currency",
+            "label": "Total Allocated",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "unallocated_amount",
+            "fieldtype": "Currency",
+            "label": "Unallocated Amount",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_notes",
+            "fieldtype": "Section Break",
+            "label": "Notes"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Small Text",
+            "label": "Remarks"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [],
+    "modified": "2026-02-08 12:30:00.000000",
+    "modified_by": "Administrator",
+    "module": "Microfinance",
+    "name": "Loan Repayment",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "amend": 0,
+            "cancel": 1,
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "submit": 1,
+            "write": 1
+        },
+        {
+            "amend": 0,
+            "cancel": 0,
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Loan Officer",
+            "share": 0,
+            "submit": 1,
+            "write": 1
+        },
+        {
+            "amend": 0,
+            "cancel": 1,
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Branch Manager",
+            "share": 0,
+            "submit": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "loan",
+    "track_changes": 1,
+    "track_seen": 1
+}

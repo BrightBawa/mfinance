@@ -1,0 +1,12 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Borrower Demographics",
+    "chart_name": "Borrower Demographics",
+    "chart_type": "Pie",
+    "document_type": "Borrower",
+    "group_by_based_on": "employment_type",
+    "aggregate_function": "Count",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT employment_type, COUNT(*) as count FROM `tabBorrower` GROUP BY employment_type"
+}

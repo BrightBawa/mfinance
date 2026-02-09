@@ -1,0 +1,67 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Loan Product Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "annual_interest_rate_min",
+            "fieldtype": "Float",
+            "label": "Min Annual Interest Rate (%)"
+        },
+        {
+            "fieldname": "annual_interest_rate_max",
+            "fieldtype": "Float",
+            "label": "Max Annual Interest Rate (%)"
+        },
+        {
+            "fieldname": "min_age",
+            "fieldtype": "Int",
+            "label": "Min Age"
+        },
+        {
+            "fieldname": "max_age",
+            "fieldtype": "Int",
+            "label": "Max Age"
+        },
+        {
+            "fieldname": "min_tenure_months",
+            "fieldtype": "Int",
+            "label": "Min Tenure (months)"
+        },
+        {
+            "fieldname": "max_tenure_months",
+            "fieldtype": "Int",
+            "label": "Max Tenure (months)"
+        },
+        {
+            "fieldname": "min_loan_amount",
+            "fieldtype": "Currency",
+            "label": "Min Loan Amount"
+        },
+        {
+            "fieldname": "max_loan_amount",
+            "fieldtype": "Currency",
+            "label": "Max Loan Amount"
+        },
+        {
+            "fieldname": "repayment_frequency",
+            "fieldtype": "Select",
+            "label": "Default Repayment Frequency",
+            "options": "Monthly\nQuarterly"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Loan Product"
+}

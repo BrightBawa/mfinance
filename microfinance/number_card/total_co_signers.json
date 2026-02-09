@@ -1,0 +1,13 @@
+{
+    "doctype": "Number Card",
+    "name": "Total Co-Signers",
+    "label": "Total Co-Signers",
+    "type": "Document Type",
+    "document_type": "Co Signer",
+    "function": "Count",
+    "filters_json": "[]",
+    "is_public": 1,
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "color": "#AA8ED6"
+}

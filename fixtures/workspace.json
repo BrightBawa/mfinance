@@ -1,0 +1,24 @@
+[
+    {
+        "doctype": "Workspace",
+        "name": "BI App Home",
+        "title": "BI App Home",
+        "icon": "octicon octicon-home",
+        "label": "BI App",
+        "sidebar_items": [],
+        "content": [
+            {
+                "type": "section",
+                "label": "Quick Links",
+                "cards": [
+                    {"type": "shortcut", "label": "Create Loan", "doctype": "Loan"},
+                    {"type": "shortcut", "label": "Borrowers", "doctype": "Borrower"},
+                    {"type": "shortcut", "label": "Loan Products", "doctype": "Loan Product"},
+                    {"type": "shortcut", "label": "Disbursements", "doctype": "Loan Disbursement"},
+                    {"type": "shortcut", "label": "Repayments", "doctype": "Loan Repayment"},
+                    {"type": "shortcut", "label": "Repayment Schedule", "doctype": "Repayment Schedule"}
+                ]
+            }
+        ]
+    }
+]

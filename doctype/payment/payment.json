@@ -1,0 +1,36 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Payment ID"
+        },
+        {
+            "fieldname": "loan",
+            "fieldtype": "Link",
+            "label": "Loan",
+            "options": "Loan"
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "label": "Amount Paid"
+        },
+        {
+            "fieldname": "payment_date",
+            "fieldtype": "Date",
+            "label": "Payment Date"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Pending\nReconciled\nFailed"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Payment"
+}

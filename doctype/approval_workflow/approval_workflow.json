@@ -1,0 +1,30 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Approval Workflow ID"
+        },
+        {
+            "fieldname": "doctype_name",
+            "fieldtype": "Data",
+            "label": "DocType Name"
+        },
+        {
+            "fieldname": "workflow_name",
+            "fieldtype": "Data",
+            "label": "Workflow Name"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": 1
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Approval Workflow"
+}

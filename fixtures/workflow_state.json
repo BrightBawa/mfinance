@@ -1,0 +1,44 @@
+[
+    {
+        "doctype": "Workflow State",
+        "name": "Draft",
+        "workflow_state_name": "Draft",
+        "style": "Info",
+        "icon": "edit"
+    },
+    {
+        "doctype": "Workflow State",
+        "name": "Pending Approval",
+        "workflow_state_name": "Pending Approval",
+        "style": "Warning",
+        "icon": "clock"
+    },
+    {
+        "doctype": "Workflow State",
+        "name": "Credit Check",
+        "workflow_state_name": "Credit Check",
+        "style": "Primary",
+        "icon": "file-text"
+    },
+    {
+        "doctype": "Workflow State",
+        "name": "Review",
+        "workflow_state_name": "Review",
+        "style": "Primary",
+        "icon": "eye"
+    },
+    {
+        "doctype": "Workflow State",
+        "name": "Approved",
+        "workflow_state_name": "Approved",
+        "style": "Success",
+        "icon": "check"
+    },
+    {
+        "doctype": "Workflow State",
+        "name": "Rejected",
+        "workflow_state_name": "Rejected",
+        "style": "Danger",
+        "icon": "x"
+    }
+]

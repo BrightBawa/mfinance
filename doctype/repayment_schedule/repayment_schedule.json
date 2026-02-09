@@ -1,0 +1,200 @@
+{
+    "actions": [],
+    "allow_rename": 0,
+    "autoname": "naming_series:",
+    "creation": "2026-02-08 13:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 0,
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "loan",
+        "borrower",
+        "company",
+        "column_break_1",
+        "schedule_date",
+        "currency",
+        "status",
+        "section_break_totals",
+        "total_principal",
+        "total_interest",
+        "total_amount",
+        "column_break_2",
+        "total_paid",
+        "total_outstanding",
+        "section_break_schedule",
+        "schedule_entries"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "SCHED-.YYYY.-",
+            "reqd": 1
+        },
+        {
+            "fieldname": "loan",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Loan",
+            "options": "Loan",
+            "reqd": 1
+        },
+        {
+            "fetch_from": "loan.borrower",
+            "fieldname": "borrower",
+            "fieldtype": "Link",
+            "label": "Borrower",
+            "options": "Borrower",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "loan.company",
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "in_standard_filter": 1,
+            "label": "Company",
+            "options": "Company",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "Today",
+            "fieldname": "schedule_date",
+            "fieldtype": "Date",
+            "label": "Schedule Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "currency",
+            "fieldtype": "Link",
+            "label": "Currency",
+            "options": "Currency",
+            "reqd": 1
+        },
+        {
+            "default": "Active",
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Active\nCompleted\nCancelled"
+        },
+        {
+            "fieldname": "section_break_totals",
+            "fieldtype": "Section Break",
+            "label": "Schedule Totals"
+        },
+        {
+            "fieldname": "total_principal",
+            "fieldtype": "Currency",
+            "label": "Total Principal",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_interest",
+            "fieldtype": "Currency",
+            "label": "Total Interest",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Amount",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "0",
+            "fieldname": "total_paid",
+            "fieldtype": "Currency",
+            "label": "Total Paid",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "total_outstanding",
+            "fieldtype": "Currency",
+            "label": "Total Outstanding",
+            "precision": "2",
+            "read_only": 1
+        },
+        {
+            "collapsible": 0,
+            "fieldname": "section_break_schedule",
+            "fieldtype": "Section Break",
+            "label": "Repayment Schedule"
+        },
+        {
+            "fieldname": "schedule_entries",
+            "fieldtype": "Table",
+            "label": "Schedule Entries",
+            "options": "Repayment Schedule Detail",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-08 13:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Microfinance",
+    "name": "Repayment Schedule",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Loan Officer",
+            "share": 0,
+            "write": 0
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Branch Manager",
+            "share": 0,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "loan",
+    "track_changes": 1
+}

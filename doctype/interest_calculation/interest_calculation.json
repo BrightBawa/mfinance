@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "interest####",
+ "creation": "2025-01-14 17:14:06.391193",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenure_column",
+  "loan_application",
+  "full_name",
+  "email",
+  "approved_amount",
+  "interest",
+  "tenure",
+  "interest_amount",
+  "final_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenure_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount"
+  },
+  {
+   "fieldname": "interest",
+   "fieldtype": "Float",
+   "label": "Interest"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Int",
+   "label": "Tenure"
+  },
+  {
+   "fieldname": "final_amount",
+   "fieldtype": "Currency",
+   "label": "Final Amount"
+  },
+  {
+   "fieldname": "loan_application",
+   "fieldtype": "Link",
+   "label": "Loan Application",
+   "options": "Loan Application"
+  },
+  {
+   "fieldname": "interest_amount",
+   "fieldtype": "Currency",
+   "label": "Interest Amount"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Link",
+   "label": "Full Name",
+   "options": "FullName"
+  },
+  {
+   "fetch_from": "full_name.email",
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "label": "Email",
+   "options": "Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-26 13:08:43.479115",
+ "modified_by": "Administrator",
+ "module": "Microfinance",
+ "name": "Interest Calculation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

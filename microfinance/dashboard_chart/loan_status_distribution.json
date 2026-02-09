@@ -1,0 +1,12 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Loan Status Distribution",
+    "chart_name": "Loan Status Distribution",
+    "chart_type": "Donut",
+    "document_type": "Loan",
+    "group_by_based_on": "docstatus",
+    "aggregate_function": "Count",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT docstatus, COUNT(*) as count FROM `tabLoan` WHERE docstatus IN (0, 1) GROUP BY docstatus"
+}

@@ -1,0 +1,476 @@
+{
+    "doctype": "Workspace",
+    "name": "BI App Home",
+    "label": "BI App Home",
+    "docstatus": 0,
+    "for_desk": 1,
+    "sidebar": [
+        {
+            "name": "Loans",
+            "icon": "octicon octicon-bookmark",
+            "link": "#List/Loan"
+        },
+        {
+            "name": "Loan Applications",
+            "icon": "octicon octicon-file-text",
+            "link": "#List/Loan Application"
+        },
+        {
+            "name": "Loan Approvals",
+            "icon": "octicon octicon-shield-check",
+            "link": "#List/Loan Approval"
+        },
+        {
+            "name": "Borrowers",
+            "icon": "octicon octicon-person",
+            "link": "#List/Borrower"
+        },
+        {
+            "name": "Payments",
+            "icon": "octicon octicon-credit",
+            "link": "#List/Payment"
+        },
+        {
+            "name": "Reports",
+            "icon": "octicon octicon-graph",
+            "link": "#query-report"
+        }
+    ],
+    "shortcuts": [
+        {
+            "label": "New Loan",
+            "link_to": "Loan",
+            "color": "#5E7CFA",
+            "icon": "octicon octicon-file-add",
+            "type": "Link",
+            "doc_view": "List",
+            "description": "Create a new loan application"
+        },
+        {
+            "label": "New Loan Application",
+            "link_to": "Loan Application",
+            "color": "#845EF7",
+            "icon": "octicon octicon-file-add",
+            "type": "Link",
+            "doc_view": "List",
+            "description": "Create a new loan application (loan_management)"
+        },
+        {
+            "label": "Pending Approvals",
+            "link_to": "Loan",
+            "color": "#FFA94D",
+            "icon": "octicon octicon-check",
+            "type": "Link",
+            "doc_view": "List",
+            "description": "View loans awaiting approval"
+        },
+        {
+            "label": "Process Loan Approvals",
+            "link_to": "Loan Approval",
+            "color": "#F59F00",
+            "icon": "octicon octicon-shield-check",
+            "type": "Link",
+            "doc_view": "List",
+            "description": "Process pending loan approvals"
+        },
+        {
+            "label": "New Borrower",
+            "link_to": "Borrower",
+            "color": "#748FFC",
+            "icon": "octicon octicon-person-add",
+            "type": "Link",
+            "doc_view": "List",
+            "description": "Register a new borrower"
+        },
+        {
+            "label": "Dashboard",
+            "link_to": "/app/dashboard",
+            "color": "#12B886",
+            "icon": "octicon octicon-dash",
+            "type": "Link",
+            "description": "View analytics dashboard"
+        }
+    ],
+    "content": [
+        {
+            "block_type": "Row",
+            "columns": [
+                {
+                    "idx": 0,
+                    "blocks": [
+                        {
+                            "block_type": "Card",
+                            "data": {
+                                "card_name": "Total Loans"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "idx": 1,
+                    "blocks": [
+                        {
+                            "block_type": "Card",
+                            "data": {
+                                "card_name": "Active Loans"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "idx": 2,
+                    "blocks": [
+                        {
+                            "block_type": "Card",
+                            "data": {
+                                "card_name": "Pending Approvals"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "idx": 3,
+                    "blocks": [
+                        {
+                            "block_type": "Card",
+                            "data": {
+                                "card_name": "Repayment Collection Rate"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "block_type": "Section",
+            "template": "Tabbed",
+            "data": {
+                "tabs": [
+                    {
+                        "label": "Loans",
+                        "blocks": [
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Loans"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Active Loans"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 2,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Pending Approvals"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Loan Status Distribution"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Approval Trends"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Borrowers",
+                        "blocks": [
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Borrowers"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Government Workers"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 2,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Document Verification Rate"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Borrower Demographics"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Verification Status"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Payments",
+                        "blocks": [
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Repayment Collection Rate"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Late Payment Rate"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Payment Performance"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Collection Trend"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Admin",
+                        "blocks": [
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Branches"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Loan Products"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 2,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Collateral Value"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 3,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Co-Signers"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Loan Management",
+                        "blocks": [
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Total Loan Applications"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Pending Loan Approvals"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 2,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Card",
+                                                "data": {
+                                                    "card_name": "Approved Loan Applications"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_type": "Row",
+                                "columns": [
+                                    {
+                                        "idx": 0,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Loan Application Status"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "idx": 1,
+                                        "blocks": [
+                                            {
+                                                "block_type": "Chart",
+                                                "data": {
+                                                    "chart_name": "Loan Approval Workflow"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "add_total_row": 1,
+    "columns": [],
+    "creation": "2026-02-08 14:40:00.000000",
+    "disable_prepared_report": 0,
+    "disabled": 0,
+    "docstatus": 0,
+    "doctype": "Report",
+    "idx": 0,
+    "is_standard": "Yes",
+    "letter_head": "",
+    "modified": "2026-02-08 14:40:00.000000",
+    "modified_by": "Administrator",
+    "module": "Bi App",
+    "name": "Disbursement Register",
+    "owner": "Administrator",
+    "prepared_report": 0,
+    "ref_doctype": "Loan Disbursement",
+    "report_name": "Disbursement Register",
+    "report_type": "Script Report",
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "Loan Officer"
+        },
+        {
+            "role": "Branch Manager"
+        },
+        {
+            "role": "Finance Manager"
+        }
+    ]
+}

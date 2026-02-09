@@ -1,0 +1,13 @@
+{
+    "doctype": "Number Card",
+    "name": "Total Loans",
+    "label": "Total Loans",
+    "type": "Document Type",
+    "document_type": "Loan",
+    "function": "Count",
+    "filters_json": "[]",
+    "is_public": 1,
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "color": "#5E7CFA"
+}

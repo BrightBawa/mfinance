@@ -1,0 +1,107 @@
+[
+    {
+        "doctype": "Workflow",
+        "name": "Loan Approval Workflow",
+        "workflow_name": "Loan Approval Workflow",
+        "document_type": "Loan",
+        "is_active": 1,
+        "send_email_alert": 1,
+        "workflow_state_field": "workflow_state",
+        "states": [
+            {
+                "state": "Draft",
+                "doc_status": "0",
+                "allow_edit": "Loan Officer",
+                "is_optional_state": 0
+            },
+            {
+                "state": "Pending Approval",
+                "doc_status": "0",
+                "allow_edit": "Branch Manager",
+                "is_optional_state": 0
+            },
+            {
+                "state": "Credit Check",
+                "doc_status": "0",
+                "allow_edit": "Credit Officer",
+                "is_optional_state": 0
+            },
+            {
+                "state": "Review",
+                "doc_status": "0",
+                "allow_edit": "Branch Manager",
+                "is_optional_state": 0
+            },
+            {
+                "state": "Approved",
+                "doc_status": "1",
+                "allow_edit": "System Manager",
+                "is_optional_state": 0
+            },
+            {
+                "state": "Rejected",
+                "doc_status": "0",
+                "allow_edit": "System Manager",
+                "is_optional_state": 1
+            }
+        ],
+        "transitions": [
+            {
+                "state": "Draft",
+                "action": "Submit for Approval",
+                "next_state": "Pending Approval",
+                "allowed": "Loan Officer",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Pending Approval",
+                "action": "Send to Credit Check",
+                "next_state": "Credit Check",
+                "allowed": "Branch Manager",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Pending Approval",
+                "action": "Reject",
+                "next_state": "Rejected",
+                "allowed": "Branch Manager",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Credit Check",
+                "action": "Send to Review",
+                "next_state": "Review",
+                "allowed": "Credit Officer",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Credit Check",
+                "action": "Reject",
+                "next_state": "Rejected",
+                "allowed": "Credit Officer",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Review",
+                "action": "Approve",
+                "next_state": "Approved",
+                "allowed": "Branch Manager",
+                "allow_self_approval": 0,
+                "condition": ""
+            },
+            {
+                "state": "Review",
+                "action": "Reject",
+                "next_state": "Rejected",
+                "allowed": "Branch Manager",
+                "allow_self_approval": 0,
+                "condition": ""
+            }
+        ]
+    }
+]

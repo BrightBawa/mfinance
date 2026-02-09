@@ -1,0 +1,12 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Approval Trends",
+    "chart_name": "Approval Trends",
+    "chart_type": "Line",
+    "document_type": "Loan",
+    "group_by_based_on": "DATE(creation)",
+    "aggregate_function": "Count",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT DATE(creation) as date, COUNT(*) as approvals FROM `tabLoan` WHERE docstatus = 1 GROUP BY DATE(creation) ORDER BY date DESC LIMIT 30"
+}

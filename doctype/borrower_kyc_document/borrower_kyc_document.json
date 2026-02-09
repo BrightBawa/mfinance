@@ -1,0 +1,82 @@
+{
+    "actions": [],
+    "creation": "2026-02-08 10:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "document_type",
+        "document_number",
+        "attachment",
+        "verification_status",
+        "verified_by",
+        "verified_on",
+        "notes"
+    ],
+    "fields": [
+        {
+            "columns": 2,
+            "fieldname": "document_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Document Type",
+            "options": "National ID\nPassport\nDriver's License\nUtility Bill\nSalary Certificate\nBank Statement\nTax Certificate\nOther",
+            "reqd": 1
+        },
+        {
+            "columns": 2,
+            "fieldname": "document_number",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Document Number"
+        },
+        {
+            "columns": 2,
+            "fieldname": "attachment",
+            "fieldtype": "Attach",
+            "in_list_view": 1,
+            "label": "Attachment"
+        },
+        {
+            "columns": 2,
+            "default": "Pending",
+            "fieldname": "verification_status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Verification Status",
+            "options": "Pending\nVerified\nRejected"
+        },
+        {
+            "columns": 2,
+            "fieldname": "verified_by",
+            "fieldtype": "Link",
+            "label": "Verified By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "columns": 2,
+            "fieldname": "verified_on",
+            "fieldtype": "Date",
+            "label": "Verified On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "notes",
+            "fieldtype": "Small Text",
+            "label": "Notes"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2026-02-08 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Microfinance",
+    "name": "Borrower KYC Document",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

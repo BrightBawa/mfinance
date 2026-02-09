@@ -1,0 +1,27 @@
+{
+    "allow_rename": 1,
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Settings Section",
+            "reqd": 1
+        },
+        {
+            "fieldname": "gogtprs_api_endpoint",
+            "fieldtype": "Data",
+            "label": "GOGTPRS API Endpoint"
+        },
+        {
+            "fieldname": "gogtprs_api_key",
+            "fieldtype": "Password",
+            "label": "GOGTPRS API Key"
+        }
+    ],
+    "issingle": 1,
+    "module": "Microfinance",
+    "name": "Bestinvest Settings"
+}

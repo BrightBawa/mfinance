@@ -1,0 +1,12 @@
+{
+    "doctype": "Dashboard Chart",
+    "name": "Payment Performance",
+    "chart_name": "Payment Performance",
+    "chart_type": "Bar",
+    "document_type": "Payment",
+    "group_by_based_on": "payment_status",
+    "aggregate_function": "Count",
+    "is_public": 1,
+    "use_report": 0,
+    "query": "SELECT payment_status, COUNT(*) as count FROM `tabPayment` GROUP BY payment_status"
+}

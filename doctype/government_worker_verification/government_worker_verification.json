@@ -1,0 +1,38 @@
+{
+    "autoname": "field:name",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "name",
+            "fieldtype": "Data",
+            "label": "Government Worker Verification ID"
+        },
+        {
+            "fieldname": "borrower",
+            "fieldtype": "Link",
+            "label": "Borrower",
+            "options": "Borrower",
+            "reqd": 1
+        },
+        {
+            "fieldname": "government_id",
+            "fieldtype": "Data",
+            "label": "Government ID",
+            "reqd": 1
+        },
+        {
+            "fieldname": "verification_status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Pending\nVerified\nFailed"
+        },
+        {
+            "fieldname": "verified_on",
+            "fieldtype": "DateTime",
+            "label": "Verified On"
+        }
+    ],
+    "module": "Microfinance",
+    "name": "Government Worker Verification"
+}
